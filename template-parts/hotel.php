@@ -126,7 +126,7 @@ if( $images ): ?>
 	</div>
 </section>
 
-<?php echo do_shortcode('[accordion pagetype="-hotel" contentvisible="true" title="activitiesTitle" content="activitiesContent" accordion="activitiesAccordion" accordiontitle="activitiesAccordionTitle" divtype="section" wrapper="true"]');?>
+<?php echo do_shortcode('[accordion pagetype="-hotel" contentvisible="true" title="activitiesTitle" content="activitiesContent" accordion="activitiesAccordion" accordiontitle="activitiesAccordionTitle" accordioncontent="activitiesAccordionContent" divtype="section" wrapper="true"]');?>
 
 
 

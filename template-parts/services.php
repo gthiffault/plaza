@@ -206,7 +206,7 @@ get_header();
 
 <?php /* Servives and equipment */ ?>
 	<?php echo do_shortcode('[accordion pagetype="-services-n-equipment" contentvisible="true" title="'.$seTitle.'"
-	content="'.$seContent.'" accordion="'.$seAccordion.'" accordiontitle="'.$seAccordionTitle.'" accordioncontent='.$seAccordionContent.'"
+	content="'.$seContent.'" accordion="'.$seAccordion.'" accordiontitle="'.$seAccordionTitle.'" accordioncontent="'.$seAccordionContent.'"
 	divtype="section" wrapper="true"]');?>		
 
 <?php /* Background image */ ?>

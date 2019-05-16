@@ -2867,6 +2867,9 @@ body .gform_wrapper .top_label div.ginput_container {
       display: none; } }
   .c-block-list ul li {
     margin-bottom: 64px; }
+    .c-block-list ul li .c-career_item_description li,
+    .c-block-list ul li .c-accomodation_item_description li {
+      margin-bottom: 0; }
     .c-block-list ul li figure img {
       width: 100%; }
     .c-block-list ul li figure figcaption {
