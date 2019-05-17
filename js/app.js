@@ -222,7 +222,16 @@ responsive: [
     // settings: "unslick"
     // instead of a settings object
   ]    
-      });    
+      });
+       $('.c-gallery_device').slick({
+  infinite: true,
+   arrows: true,
+   adaptiveHeight: true,
+   appendArrows: ".c-arrows",  
+      });
+
+
+
 
   $('.c-gallery').slickLightbox();
 

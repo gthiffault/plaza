@@ -44,13 +44,21 @@ get_header();
 	</div>
 </section>
 
-<section class="o-section c-block-img-txt -type-3 -v0">
+<section class="o-section c-block-gallery">
 <?php 
 
 $images = get_field('gallery');
 
 if( $images ): ?>
-    <div class="c-gallery">
+
+    <ul class="o-list-bare c-gallery_device">
+        <?php foreach( $images as $image ): ?>
+        	 <?php $width = get_field('width_media', $image['ID']);?>
+             <li><img src="<?php echo $image['sizes']['large']; ?>" alt="<?php echo $image['alt']; ?>" /></li>
+        <?php endforeach; ?>
+    </ul>
+
+    <div class="c-gallery -desktop">
     		    			<div class="grid-sizer"></div>
         <?php foreach( $images as $image ): ?>
         	 <?php $width = get_field('width_media', $image['ID']);?>
