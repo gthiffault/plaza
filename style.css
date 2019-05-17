@@ -2953,6 +2953,8 @@ html.-js-menu-active {
     background: #FFF; }
   .c-block-accordion .c-icon:after {
     background: #FFF; }
+  .c-block-accordion a {
+    color: #FFF !important; }
 
 .c-block-accordion.-services {
   padding: 0;
