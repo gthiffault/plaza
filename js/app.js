@@ -256,7 +256,7 @@ $('.c-gallery').masonry({
 });
 
 
-
+if($('.c-google-maps').length) {
 	$.getScript("https://maps.googleapis.com/maps/api/js?key=AIzaSyAWJy-6MLjGT4SX6PiePLK_dzLbgSe-pJ8").done(function(script, textStatus) {
 	var mapAction = function(CurrentAnimation) {
         var center_ico = new google.maps.LatLng(45.259493, -74.128118);     
@@ -305,6 +305,7 @@ $('.c-gallery').masonry({
         mapAction();
     });  
 	});
+}
 
 $(document).ready(function(){
   // Add smooth scrolling to all links
