@@ -121,8 +121,6 @@ add_action( 'widgets_init', 'plaza_widgets_init' );
  */
 function plaza_scripts() {
 	wp_enqueue_style( 'plaza-style', get_stylesheet_uri() );
-	wp_enqueue_script( 'main-script', get_template_directory_uri() . '/js/app.js', true);
-
 }
 add_action( 'wp_enqueue_scripts', 'plaza_scripts' );
 
