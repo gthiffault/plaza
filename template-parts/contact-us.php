@@ -52,7 +52,7 @@ get_header();
 				<div class="o-layout__item u-2/5@landscape-medium-tablet">
 					<ul class="o-list-bare c-contact-us_info">
 						<li><?php echo $address; ?></li>
-						<li><?php echo $phone; ?></li>
+						<li><?php echo $phone; ?><br><?php echo get_field('optTollFree','option');?></li>
 						<li><?php echo $email; ?></li>
 					</ul>
 				</div>					

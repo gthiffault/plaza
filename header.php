@@ -44,6 +44,7 @@
 						<div class="o-layout__item c-header-menu_item u-1/2@landscape-medium-tablet">
 							<div class="c-header-menu_item_content">
 					<?php wp_nav_menu( array('theme_location' => 'menu-1','menu_id' => 'menu-main',) );?>
+					<a href="<?php echo get_field('bookingLink','option')['url'];?>" target="_blank" class="c-btn c-btn--secondary -menu">Réservez maintenant</a>
 					<ul class="c-footer_social-network">
 						<li class="-facebook"><a href="<?php echo get_field('optFacebook','option')['url'];?>" target="_blank">FA</a></li>
 						<li class="-instagram"><a href="<?php echo get_field('optInstagram','option')['url'];?>" target="_blank">IN</a></li>
@@ -89,9 +90,9 @@ if( !empty($image) ): ?>
 						</div>
 						</div>
 	 			<?php } elseif ( is_page() ) { ?>	
-					<div class="c-banner-page">
+					<div class="c-banner-page" style="background: url(<?php echo get_field('bannerImage')['sizes']['large']; ?>);">
 						<div class="c-banner-home_text">
-<h1><?php echo get_the_title();?></h1>
+							<h1><?php echo get_the_title();?></h1>
 						</div>
 					</div>
 	 			<?php } ?>	

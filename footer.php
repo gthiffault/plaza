@@ -38,6 +38,7 @@
 						<div class="c-coordonates_content">
 						<p class="c-footer_title">Contact us</p>
 						<p><?php echo get_field('optPhone','option');?>
+						<br><?php echo get_field('optTollFree','option');?>
 						<br><a href="mailto:<?php echo get_field('optEmail','option');?>"><?php echo get_field('optEmail','option');?></a>
 						</p>
 						</div>

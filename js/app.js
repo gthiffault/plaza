@@ -79,7 +79,8 @@ count++;
   infinite: true,
   speed: 300,
    dots: false,
-   arrows: false,
+   arrows: true,
+   appendArrows:".c-arrows",
 responsive: [
     {
       breakpoint: 9999999999,
@@ -135,7 +136,8 @@ responsive: [
  infinite: true,
   speed: 300,
    dots: false,
-   arrows: false,
+   arrows: true,
+   appendArrows: ".c-arrows",
 responsive: [
     {
       breakpoint: 99999999999999999,
