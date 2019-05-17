@@ -5722,18 +5722,6 @@ li.ui-timepicker-selected .ui-timepicker-duration, .ui-timepicker-list li:hover 
   -moz-osx-font-smoothing: grayscale;
   content: '×'; }
 
-/* Slider */
-.slick-loading .slick-list {
-  background: #fff url("./ajax-loader.gif") center center no-repeat; }
-
-/* Icons */
-@font-face {
-  font-family: "slick";
-  src: url("./fonts/slick.eot");
-  src: url("./fonts/slick.eot?#iefix") format("embedded-opentype"), url("./fonts/slick.woff") format("woff"), url("./fonts/slick.ttf") format("truetype"), url("./fonts/slick.svg#slick") format("svg");
-  font-weight: normal;
-  font-style: normal; }
-
 /* Arrows */
 .c-arrows {
   position: relative;
