@@ -22,8 +22,8 @@
 
 // Initialisation 
 	// Bloc Txt
-		$blocTxtTitle 		= get_field('blocTxtTitle');
-		$blocTxtContent 	= get_field('blocTxtContent');
+		$blocTxtTitle 		= get_field('contactUsTitle');
+		$blocTxtContent 	= get_field('contactUsContent');
 	// Contact information		
 		$address = get_field('optAddress','option');
 		$phone = get_field('optPhone','option');
@@ -69,7 +69,7 @@ get_header();
 	<section class="o-section c-social-network-n-google-maps">
 		<div class="o-wrapper">
 			<div class="c-social-network">
-				<h2><?php echo __('Follow us');?></h2>
+				<h2><?php echo __('Follow us','plaza');?></h2>
 				<ul class="c-social-network_ul">
 					<li class="-facebook"><a href="<?php echo $facebook;?>" target="_blank">FA</a></li>
 					<li class="-instagram"><a href="<?php echo $instagram;?>" target="_blank">IN</a></li>

@@ -869,7 +869,7 @@ table {
 
 .o-layout--large {
   margin-left: -48px; }
-  .o-layout--large > .o-layout__item {
+  .o-layout--large .o-layout__item {
     padding-left: 48px; }
 
 .o-layout--huge {
@@ -1940,9 +1940,9 @@ table {
   display: block;
   z-index: -1;
   -webkit-transition: z-index 0s 0.5s linear;
-  transition: z-index 0s 0.5s linear;
-  padding-top: 120px; }
+  transition: z-index 0s 0.5s linear; }
   .c-header-menu .c-header-menu_item_content {
+    overflow: auto;
     width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1955,6 +1955,12 @@ table {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column; }
+    @media (min-width: 320px) {
+      .c-header-menu .c-header-menu_item_content {
+        padding-bottom: 120px; } }
+    @media (min-width: 1024px) {
+      .c-header-menu .c-header-menu_item_content {
+        padding-bottom: 0; } }
     .c-header-menu .c-header-menu_item_content .menu-menu-1-container {
       width: 100%; }
     @media (min-width: 320px) {
@@ -1970,6 +1976,12 @@ table {
       width: 100%; } }
   .c-header-menu .o-wrapper {
     position: relative; }
+  @media (min-width: 320px) {
+    .c-header-menu {
+      padding-top: 80px; } }
+  @media (min-width: 840px) {
+    .c-header-menu {
+      padding-top: 120px; } }
   .c-header-menu a {
     color: #FFF;
     font-family: 'Playfair Display', serif;
@@ -3480,10 +3492,15 @@ input[type="file" i]::-webkit-file-upload-button {
         display: inline-block;
         text-indent: -99999px;
         position: relative;
-        margin-right: 136px;
         opacity: 1;
         -webkit-transition: opacity 0.35s cubic-bezier(0.445, 0.05, 0.55, 0.95);
         transition: opacity 0.35s cubic-bezier(0.445, 0.05, 0.55, 0.95); }
+        @media (min-width: 320px) {
+          .c-social-network-n-google-maps .c-social-network .c-social-network_ul li {
+            margin-right: 72px; } }
+        @media (min-width: 840px) {
+          .c-social-network-n-google-maps .c-social-network .c-social-network_ul li {
+            margin-right: 136px; } }
         .c-social-network-n-google-maps .c-social-network .c-social-network_ul li:hover {
           opacity: 0.4; }
         .c-social-network-n-google-maps .c-social-network .c-social-network_ul li:last-child {
@@ -3529,14 +3546,16 @@ input[type="file" i]::-webkit-file-upload-button {
       margin-left: 0; } }
 
 .c-block-region {
-  padding: 112px 0 144px 0;
+  padding: 112px 0 112px 0;
   background: #F7F7F7; }
   .c-block-region ul {
     text-align: center;
-    margin: 0; }
-  .c-block-region li img {
-    width: 100%;
-    height: auto; }
+    margin-bottom: 0; }
+  .c-block-region li {
+    margin-bottom: 32px; }
+    .c-block-region li img {
+      width: 100%;
+      height: auto; }
   .c-block-region h2 {
     text-align: center;
     margin-bottom: 88px; }
@@ -3589,9 +3608,8 @@ input[type="file" i]::-webkit-file-upload-button {
       margin-bottom: 20px; }
     .c-footer .c-footer_content a {
       color: #FFF;
-      text-decoration: none; }
-      .c-footer .c-footer_content a:hover {
-        text-decoration: underline; }
+      font-weight: 600;
+      text-decoration: underline; }
     .c-footer .c-footer_content p {
       color: #FFF;
       font-size: 14px;
@@ -3643,6 +3661,10 @@ input[type="file" i]::-webkit-file-upload-button {
     @media (min-width: 840px) {
       .c-footer .c-footer_copyright small {
         text-align: center; } }
+    .c-footer .c-footer_copyright small a {
+      color: #FFF;
+      font-weight: 600;
+      text-decoration: underline; }
 
 /*! jQuery UI - v1.12.1 - 2016-09-14
 * http://jqueryui.com
@@ -5688,6 +5710,14 @@ li.ui-timepicker-selected .ui-timepicker-duration, .ui-timepicker-list li:hover 
   height: 15px; }
   .c-arrows .slick-prev {
     top: 0; }
+  .c-arrows.-region {
+    margin-bottom: 0; }
+    .c-arrows.-region .slick-prev:first-child {
+      z-index: 3; }
+    .c-arrows.-region .slick-prev {
+      background-position: -317px -190px; }
+    .c-arrows.-region .slick-next {
+      background-position: -317px -190px; }
 
 .slick-prev,
 .slick-next {

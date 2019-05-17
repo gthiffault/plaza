@@ -62,7 +62,7 @@ get_header();
 			        								<div class="c-career_item_description">
 			        									<?php echo get_field('careerContent');?>
 			        								</div>
-			        								<a href="" class="c-btn c-btn--primary"><?php echo __('Apply now','plaza');?></a>
+			        								<a href="#c-career_form" class="c-btn c-btn--primary"><?php echo __('Apply now','plaza');?></a>
 			        							</div>
 			        							<div class="c-icon"></div>
 			        						</figcaption>
@@ -91,7 +91,7 @@ get_header();
 				        								<div class="c-career_item_description">
 				        									<?php echo get_field('careerContent');?>
 				        								</div>
-				        								<a href="" class="c-btn c-btn--primary"><?php echo __('Apply now','plaza');?></a>
+				        								<a href="#c-career_form" class="c-btn c-btn--primary"><?php echo __('Apply now','plaza');?></a>
 				        							</div>
 				        							<div class="c-icon"></div>
 				        						</figcaption>
@@ -118,7 +118,7 @@ get_header();
 				        								<div class="c-career_item_description">
 				        									<?php echo get_field('careerContent');?>
 				        								</div>
-				        								<a href="" class="c-btn c-btn--primary"><?php echo __('Apply now','plaza');?></a>
+				        								<a href="#c-career_form" class="c-btn c-btn--primary"><?php echo __('Apply now','plaza');?></a>
 				        							</div>
 				        							<div class="c-icon"></div>
 				        						</figcaption>
@@ -135,7 +135,7 @@ get_header();
 	</section> 
 
 <?php /* Form - Career */ ?>
-	<section class="o-section c-form -career">
+	<section id="c-career_form" class="o-section c-form -career">
 		<div class="o-wrapper">
 			<div class="c-form_content">
 				<h2><?php echo $formTitle;?></h2>

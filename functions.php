@@ -359,7 +359,7 @@ $image_alt = get_post_meta($image_id, '_wp_attachment_image_alt', TRUE);?>
 						$people = get_field('accomodationPeople');?>						
 
 						<li class="-bed"><?php echo $bed;?></li>
-						<li class="-area"><?php echo $space . ' ';?>ft<sup>2</sup></li>
+						<li class="-area"><?php echo $space . ' ';?><?php echo __('ft','plaza');?><sup>2</sup></li>
 						<li class="-people"><?php echo $people . ' ';?><?php echo __('ppl','plaza');?></li>
 					</ul>
 					<div class="c-accomodation_item_content">

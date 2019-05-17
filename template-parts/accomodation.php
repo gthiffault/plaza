@@ -136,9 +136,9 @@ get_header();
 		<div class="o-wrapper">
 			<h2><?php echo $regionTitle;?></h2>
 			<?php if( $regionImages ): ?>
-	    		<ul class="o-layout">
+	    		<ul class="o-layout o-layout--large c-block-region_ul">
 	        		<?php foreach( $regionImages as $image ): ?>
-	            		<li class="o-layout__item u-1/4">
+	            		<li class="o-layout__item">
 			            	<?php $link = get_field('link_media', $image['ID']);
 							if($link) {
 								echo '<a href="' . $link . '" target="_blank">';
@@ -151,6 +151,7 @@ get_header();
 	        		<?php endforeach; ?>
 	    		</ul>
 			<?php endif; ?>
+			<div class="c-arrows -region"></div>
 		</div>
 	</section>
 
