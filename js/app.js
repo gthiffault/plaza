@@ -35,7 +35,10 @@
 
 
 	jQuery(document).ready(function() {
-	jQuery('.c-accordion_list_ul li h3').click(function() {
+	
+})
+
+jQuery('.c-accordion_list_ul li h3').click(function() {
 		$(this).next('.c-accordion_hidden').slideToggle();
 		$(this).closest('li').toggleClass('-js-item-visible');
 	})
@@ -52,7 +55,7 @@
   } );
 
 $(".c-form_date input").prop("readonly", true);
-})
+
 
 	  $('.c-form_hour-start input').timepicker({ 'timeFormat': 'H:i','disableTextInput': true });
 	  $('.c-form_hour-end input').timepicker({ 'timeFormat': 'H:i','disableTextInput': true });	  
