@@ -301,6 +301,8 @@ function PREFIX_apply_acf_modifications() {
 
 add_image_size( 'list-img', 564, 377, array( 'center', 'center' ) ); // Hard crop left top
 add_image_size( 'device-img', 564, array( 'center', 'center' ) ); // Hard crop left top
+add_image_size( 'banner-home', 1440,720, array( 'center', 'center' ) ); // Hard crop left top
+add_image_size( 'banner-page', 1440,560, array( 'center', 'center' ) ); // Hard crop left top
 
 
 add_filter( 'gform_pre_render_1', 'populate_posts' );

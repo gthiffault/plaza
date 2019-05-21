@@ -24,10 +24,10 @@
 		<section class="o-section c-footer_content">
 			<div class="o-wrapper">
 				<div class="o-layout">
-					<div class="o-layout__item u-1/3@landscape-small-tablet u-1/2@portrait-small-tablet"><p class="c-footer_title"><?php echo __('Visit us','plaza');?>;</p>
+					<div class="o-layout__item u-1/3@landscape-small-tablet u-1/2@portrait-small-tablet"><p class="c-footer_title"><?php echo __('Visit us','plaza');?></p>
 						<p><?php echo get_field('optAddressFooter','option');?></p>
 					</div>
-					<div class="o-layout__item u-1/3@landscape-small-tablet u-1/2@portrait-small-tablet"><p class="c-footer_title"><?php echo __('Follow us','plaza');?>;</p>
+					<div class="o-layout__item u-1/3@landscape-small-tablet u-1/2@portrait-small-tablet"><p class="c-footer_title"><?php echo __('Follow us','plaza');?></p>
 					<ul class="c-footer_social-network">
 						<li class="-facebook"><a href="<?php echo get_field('optFacebook','option')['url'];?>" target="_blank">FA</a></li>
 						<li class="-instagram"><a href="<?php echo get_field('optInstagram','option')['url'];?>" target="_blank">IN</a></li>
@@ -36,7 +36,7 @@
 					</div>
 					<div class="o-layout__item c-coordonates u-1/3@landscape-small-tablet u-1/2@portrait-small-tablet">
 						<div class="c-coordonates_content">
-						<p class="c-footer_title"><?php echo __('Contact us','plaza');?>;</p>
+						<p class="c-footer_title"><?php echo __('Contact us','plaza');?></p>
 						<p><?php echo get_field('optPhone','option');?>
 						<br><?php echo get_field('optTollFree','option');?>
 						<br><a href="mailto:<?php echo get_field('optEmail','option');?>"><?php echo get_field('optEmail','option');?></a>
