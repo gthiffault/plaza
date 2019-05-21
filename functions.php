@@ -121,6 +121,8 @@ add_action( 'widgets_init', 'plaza_widgets_init' );
  */
 function plaza_scripts() {
 	wp_enqueue_style( 'plaza-style', get_stylesheet_uri() );
+    wp_enqueue_script('jquery');
+	wp_enqueue_script( 'app-js', get_template_directory_uri() . '/js/app.js', '1.0', true );
 }
 add_action( 'wp_enqueue_scripts', 'plaza_scripts' );
 
@@ -486,7 +488,6 @@ return $urls;
 function crunchify_stop_loading_wp_embed_and_jquery() {
 	if (!is_admin()) {
 		wp_deregister_script('wp-embed');
-		wp_deregister_script('jquery');  // Bonus: remove jquery too if it's not required
 	}
 }
 add_action('init', 'crunchify_stop_loading_wp_embed_and_jquery');

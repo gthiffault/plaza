@@ -17,6 +17,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="profile" href="https://gmpg.org/xfn/11">
 		<link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700|Playfair+Display|Open+Sans:300,600,700" rel="stylesheet">
+		<script type='text/javascript' src='<?php echo get_template_directory_uri();?>/js/app.js'></script>
 		<?php wp_head(); ?>
 	</head>
 	<body <?php body_class(); ?>>
