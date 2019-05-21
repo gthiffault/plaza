@@ -54,6 +54,6 @@
 	</footer><!-- #colophon -->
 
 <?php wp_footer(); ?>
-<script type='text/javascript' src='<?php echo get_template_directory_uri();?>/js/app.js' async='async'></script>
+<script type='text/javascript' src='<?php echo get_template_directory_uri();?>/js/app.js' async='defer'></script>
 </body>
 </html>
