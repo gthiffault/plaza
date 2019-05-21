@@ -102,7 +102,7 @@ if( $images ): ?>
 				<div class="c-block-txt-img_images_content">
 					<div class="c-block-img-txt_content_wrap">
 					<?php echo get_field('blocTwoImgTxtContent');?>
-					<a class="c-btn c-btn--primary" href="<?php echo get_field('blocImgTxtLink');?>"><?php echo get_field('blocTwoImgTxtLinkDescription');?></a>
+					<?php if(get_field('blocImgTxtLink').length) {?><a class="c-btn c-btn--primary" href="<?php echo get_field('blocImgTxtLink');?>"><?php echo get_field('blocTwoImgTxtLinkDescription');?></a><?php } ?>
 				</div>
 				</div>					
 				</div>
@@ -118,7 +118,7 @@ if( $images ): ?>
 				<div class="c-block-img-txt_content">
 					<div class="c-block-img-txt_content_wrap">
 					<?php echo get_field('blocTwoImgTxtContent');?>
-									<a class="c-btn c-btn--primary" href="<?php echo get_field('blocImgTxtLink');?>"><?php echo get_field('blocTwoImgTxtLinkDescription');?></a>
+					<?php if(get_field('blocImgTxtLink').length) {?><a class="c-btn c-btn--primary" href="<?php echo get_field('blocImgTxtLink');?>"><?php echo get_field('blocTwoImgTxtLinkDescription');?></a><?php } ?>
 				</div>
 				</div>
 			</div>
