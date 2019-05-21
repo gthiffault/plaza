@@ -1,9 +1,5 @@
 <?php
 
-update_option( 'siteurl', 'http://plaza.test' );
-update_option( 'home', 'http://plaza.test' );
-
-
 
 /**
  * Hôtel Plaza functions and definitions
