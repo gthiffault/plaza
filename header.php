@@ -75,7 +75,7 @@ if( !empty($image) ): ?>
 						if( $images ) { ?>
 	    					<ul class="o-list-bare c-home-gallery">
 	        					<?php foreach( $images as $image ): ?>
-	            					<li style="background: url(<?php echo $image['sizes']['large']; ?>);">
+	            					<li style="background: url(<?php echo $image['sizes']['banner-home']; ?>);">
 	            					</li>
 	        					<?php endforeach; ?>
 	    					</ul>
@@ -90,7 +90,7 @@ if( !empty($image) ): ?>
 						</div>
 						</div>
 	 			<?php } elseif ( is_page() ) { ?>	
-					<div class="c-banner-page" style="background: url(<?php echo get_field('bannerImage')['sizes']['large']; ?>);">
+					<div class="c-banner-page" style="background: url(<?php echo get_field('bannerImage')['sizes']['banner-page']; ?>);">
 						<div class="c-banner-home_text">
 							<h1><?php echo get_the_title();?></h1>
 						</div>
