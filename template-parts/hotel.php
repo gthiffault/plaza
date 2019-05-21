@@ -102,7 +102,7 @@ if( $images ): ?>
 				<div class="c-block-txt-img_images_content">
 					<div class="c-block-img-txt_content_wrap">
 					<?php echo get_field('blocTwoImgTxtContent');?>
-					<?php if(get_field('blocTwoImgTxtLink').length) {?><a class="c-btn c-btn--primary" href="<?php echo get_field('blocTwoImgTxtLink');?>#packages"><?php echo get_field('blocTwoImgTxtLinkDescription');?></a><?php } ?>
+					<?php if(get_field('blocTwoImgTxtLink').length) {?><a class="c-btn c-btn--primary" href="<?php echo get_field('blocTwoImgTxtLink')['url'];?>#packages"><?php echo get_field('blocTwoImgTxtLinkDescription');?></a><?php } ?>
 				</div>
 				</div>					
 				</div>
@@ -118,7 +118,7 @@ if( $images ): ?>
 				<div class="c-block-img-txt_content">
 					<div class="c-block-img-txt_content_wrap">
 					<?php echo get_field('blocTwoImgTxtContent');?>
-					<?php if(get_field('blocTwoImgTxtLink').length) {?><a class="c-btn c-btn--primary" href="<?php echo get_field('blocTwoImgTxtLink');?>#packages"><?php echo get_field('blocTwoImgTxtLinkDescription');?></a><?php } ?>
+					<?php if(get_field('blocTwoImgTxtLink').length) {?><a class="c-btn c-btn--primary" href="<?php echo get_field('blocTwoImgTxtLink')['url'];?>#packages"><?php echo get_field('blocTwoImgTxtLinkDescription');?></a><?php } ?>
 				</div>
 				</div>
 			</div>
