@@ -77,7 +77,7 @@ get_header();
 				    <?php endwhile;
 				echo '</ul>';?>
 				<div class="c-arrows"></div>
-			<?php endif;?>
+			<?php endif; ?>
 		</div>
 	</section>
 
@@ -86,14 +86,18 @@ get_header();
 		<div class="o-wrapper">
 			<?php $args = array('post_type' => $listPostType);
 			$query = new WP_Query( $args );
+
 			if ( $query->have_posts() ) {?>
 				<div class="o-layout o-layout--medium">
 					<div class="o-layout__item c-column-first u-1/2">
 						<ul class="o-list-bare">
-			    			<?php while ( $query->have_posts() ) {
+			    			<?php 
+			$count = 0;
+			    			while ( $query->have_posts() ) {
 			    				$query->the_post(); 
 			    				if ($query->current_post % 2 == 0) {
-									echo do_shortcode('[list_accommodation]');
+									echo do_shortcode('[list_accommodation count="' . $count .'"]');
+									$count = $count + 2;
 			    				}
 							} 
 							wp_reset_postdata();?>
@@ -103,11 +107,15 @@ get_header();
 					<?php if($query->post_count > 1) { ?>
 						<div class="o-layout__item c-column-second u-1/2">
 							<ul class="o-list-bare">
-				    			<?php while ( $query->have_posts() ) {
+				    			<?php 
+			$countEven = 1;
+				    			while ( $query->have_posts() ) {
 				    				$query->the_post(); 
 				    				if ($query->current_post % 2 == 1) {
-										echo do_shortcode('[list_accommodation]');
+										echo do_shortcode('[list_accommodation count="' . $countEven .'"]');
+										$countEven = $countEven + 2;
 				    				}
+				    				
 								}
 								wp_reset_postdata();?>
 							</ul>
@@ -115,20 +123,24 @@ get_header();
 					<?php } ?>
 					<div class="o-layout__item c-column-third u-1/1">
 						<ul class="o-list-bare">
-			    			<?php while ( $query->have_posts() ) {
+			    			<?php 
+			$countResponsive = 0;
+			    			while ( $query->have_posts() ) {
 			    				$query->the_post(); 
-									echo do_shortcode('[list_accommodation]');
+									echo do_shortcode('[list_accommodation count="' . $countResponsive .'"]');
+										$countResponsive = $countResponsive + 1;
 							}
 							wp_reset_postdata();?>
 						</ul>
 					</div>					
 				</div>
+						
 			<?php } ?>
 		</div>
 	</section> 
 
 <?php /* Tourist attractions - Accommodaton*/ ?>
-	<?php echo do_shortcode('[accordion pagetype="-accommodation" contentvisible="true" title="'.$charmTitle.'" content="'.$chamContent.'"
+	<?php echo do_shortcode('[accordion pagetype="-accommodation" id="packages" contentvisible="true" title="'.$charmTitle.'" content="'.$chamContent.'"
 	accordion="'.$charmAccordion.'" accordiontitle="'.$charmAccordionTitle.'" accordioncontent='.$charmAccordionContent.'" divtype="section" wrapper="true"]');?>
 
 <?php /* Region - Accommodations */ ?>

@@ -26,6 +26,7 @@
 				<div class="o-wrapper">
 					<div class="c-header_menu">
 						<div class="c-header_icon"></div>
+						<a class="c-header-logo_device" href="<?php echo get_site_url(); ?>"><img src="<?php echo get_template_directory_uri();?>/images/logos/hotel-plaza_logo.svg" alt=""></a>
 						<button class="hamburger hamburger--spring" type="button">
   							<span class="hamburger-box">
     							<span class="hamburger-inner"></span>
@@ -35,6 +36,7 @@
 					<div class="c-header_logo">
 						<a href="<?php echo get_site_url(); ?>"><img src="<?php echo get_template_directory_uri();?>/images/logos/hotel-plaza_logo.svg" alt=""></a>
 					</div>
+					<div class="c-header_right"></div>
 					<div class="c-header_book-online"><a href="<?php echo get_field('bookingLink','option')['url'];?>" target="_blank" class="c-btn c-btn--secondary">Réservez maintenant</a></div>
 				</div>
 			</div>

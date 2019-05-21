@@ -1,4 +1,10 @@
 <?php
+
+update_option( 'siteurl', 'http://plaza.test' );
+update_option( 'home', 'http://plaza.test' );
+
+
+
 /**
  * Hôtel Plaza functions and definitions
  *
@@ -181,7 +187,7 @@ function cptAccommodation() {
 		'label'                 => __( 'Hébergement', 'plaza' ),
 		'description'           => __( 'Hébergement', 'plaza' ),
 		'labels'                => $labels,
-		'supports'              => array( 'title', 'thumbnail' ),
+		'supports'              => array( 'title' ),
 		'hierarchical'          => true,
 		'public'                => true,
 		'show_ui'               => true,
@@ -192,7 +198,7 @@ function cptAccommodation() {
 		'can_export'            => true,
 		'has_archive'           => true,
 		'exclude_from_search'   => false,
-		'publicly_queryable'    => true,
+		'publicly_queryable'    => false,
 		'capability_type'       => 'page',
 	);
 	register_post_type( 'accommodation', $args );
@@ -247,7 +253,7 @@ function cptCareer() {
 		'can_export'            => true,
 		'has_archive'           => true,
 		'exclude_from_search'   => false,
-		'publicly_queryable'    => true,
+		'publicly_queryable'    => false,
 		'capability_type'       => 'page',
 	);
 	register_post_type( 'career', $args );
@@ -336,32 +342,63 @@ function populate_posts( $form ) {
     return $form;
 }
 
-function sc_list_accommodation() {
+function sc_list_accommodation( $atts ) {
+    $a = shortcode_atts( array(
+        'count' => '',
+    ), $atts );
+
+
+
+
+
+
 	ob_start();?>
-		<li>
+		<li class="c-accommodation_nb-<?php echo $a['count'];?>">
 			<figure>
 				<?php 
 $image_id = get_post_thumbnail_id();
 
-$image_alt = get_post_meta($image_id, '_wp_attachment_image_alt', TRUE);?>				
-				<img src="<?php echo get_the_post_thumbnail_url(get_the_ID(),'list-img');?>" alt="<?php echo $image_alt;?>">
+$image_alt = get_post_meta($image_id, '_wp_attachment_image_alt', TRUE);?>		
+
+
+<?php 
+
+$images = get_field('accomodationImages');
+$size = 'list-img'; // (thumbnail, medium, large, full or custom size)
+
+if( $images ): ?>
+    <ul class="c-accommodation_slider">
+        <?php foreach( $images as $image ): ?>
+            <li>
+            	<?php echo wp_get_attachment_image( $image['ID'], $size ); ?>
+            </li>
+        <?php endforeach; ?>
+    </ul>
+<?php endif; ?>
+
+
+
+
+
+
 				<figcaption>
 					<h3><?php echo get_the_title();?></h3>
-					<ul class="c-accomodation_item">
+<!-- 					<ul class="c-accomodation_item">
 						
 						<?php // Declaration
-						$bed 	= "";
-						$space 	= "";
-						$people = "";
-						// Initialisation 
-						$bed 	= get_field('accomodationBed');
-						$space 	= get_field('accomodationLivingSpace');
-						$people = get_field('accomodationPeople');?>						
+						// $bed 	= "";
+						// $space 	= "";
+						// $people = "";
+						// // Initialisation 
+						// $bed 	= get_field('accomodationBed');
+						// $space 	= get_field('accomodationLivingSpace');
+						// $people = get_field('accomodationPeople');
+						?>						
 
-						<li class="-bed"><?php echo $bed;?></li>
-						<li class="-area"><?php echo $space . ' ';?><?php echo __('ft','plaza');?><sup>2</sup></li>
-						<li class="-people"><?php echo $people . ' ';?><?php echo __('ppl','plaza');?></li>
-					</ul>
+<!-- 						<li class="-bed"><?php //echo $bed;?></li>
+						<li class="-area"><?php //echo $space . ' ';?><?php //echo __('ft','plaza');?><sup>2</sup></li>
+						<li class="-people"><?php //echo $people . ' ';?><?php //echo __('ppl','plaza');?></li> -->
+					<!-- </ul>  -->
 					<div class="c-accomodation_item_content">
 						<div class="c-accomodation_item_description">
 						<?php echo get_field('accomodationContent');?>
@@ -373,6 +410,7 @@ $image_alt = get_post_meta($image_id, '_wp_attachment_image_alt', TRUE);?>
 				</figcaption>
 			</figure>
 		</li>	
+
 	<?php return ob_get_clean();
 }
 
@@ -389,9 +427,13 @@ function sc_accordion( $atts ) {
         'accordioncontent' => '',        
         'divtype' => '',
         'wrapper' => '',
+        'gallery' => '',
+        'id'=>''
     ), $atts );
 	ob_start();?>
-	<<?php echo $a['divtype'];?> class="o-section c-block-accordion <?php echo $a['pagetype']; ?>">
+	<<?php echo $a['divtype'];?> 		 	<?php if (!empty(($a['id']))) { ?>
+				id="packages"
+			<?php } ?> class="o-section c-block-accordion <?php echo $a['pagetype']; ?>">
 		<?php
 		 	if (!empty(($a['wrapper']))) { ?>
 				<div class="o-wrapper">
@@ -403,6 +445,33 @@ function sc_accordion( $atts ) {
 				<?php echo get_field($a['content']);
 				echo '</div>';
 			}	?>
+		<?php if (!empty($a['gallery'])) {	?>
+		 	<?php if (!empty(($a['wrapper']))) { ?>
+				</div>
+			<?php } ?>			
+<div class="c-activities-gallery">
+	
+
+
+<?php 
+
+$images = get_field('activitiesSlider');
+$size = 'full'; // (thumbnail, medium, large, full or custom size)
+
+if( $images ): ?>
+    <ul class="c-activities-slider">
+        <?php foreach( $images as $image ): ?>
+            <li>
+            	<?php echo wp_get_attachment_image( $image['ID'], $size ); ?>
+            </li>
+        <?php endforeach; ?>
+    </ul>
+<?php endif;?>
+</div>
+		 	<?php if (!empty(($a['wrapper']))) { ?>
+				<div class="o-wrapper">
+			<?php } ?>			
+		<?php }?>
 
 			<div class="c-accordion_list">
 				<?php if( have_rows($a['accordion']) ):

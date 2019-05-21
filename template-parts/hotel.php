@@ -102,7 +102,7 @@ if( $images ): ?>
 				<div class="c-block-txt-img_images_content">
 					<div class="c-block-img-txt_content_wrap">
 					<?php echo get_field('blocTwoImgTxtContent');?>
-
+					<?php if(get_field('blocTwoImgTxtLink').length) {?><a class="c-btn c-btn--primary" href="<?php echo get_field('blocTwoImgTxtLink');?>#packages"><?php echo get_field('blocTwoImgTxtLinkDescription');?></a><?php } ?>
 				</div>
 				</div>					
 				</div>
@@ -118,7 +118,7 @@ if( $images ): ?>
 				<div class="c-block-img-txt_content">
 					<div class="c-block-img-txt_content_wrap">
 					<?php echo get_field('blocTwoImgTxtContent');?>
-
+					<?php if(get_field('blocTwoImgTxtLink').length) {?><a class="c-btn c-btn--primary" href="<?php echo get_field('blocTwoImgTxtLink');?>#packages"><?php echo get_field('blocTwoImgTxtLinkDescription');?></a><?php } ?>
 				</div>
 				</div>
 			</div>
@@ -134,7 +134,7 @@ if( $images ): ?>
 	</div>
 </section>
 
-<?php echo do_shortcode('[accordion pagetype="-hotel" contentvisible="true" title="activitiesTitle" content="activitiesContent" accordion="activitiesAccordion" accordiontitle="activitiesAccordionTitle" accordioncontent="activitiesAccordionContent" divtype="section" wrapper="true"]');?>
+<?php echo do_shortcode('[accordion pagetype="-hotel" gallery="true" contentvisible="true" title="activitiesTitle" content="activitiesContent" accordion="activitiesAccordion" accordiontitle="activitiesAccordionTitle" accordioncontent="activitiesAccordionContent" divtype="section" wrapper="true"]');?>
 
 
 
