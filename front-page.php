@@ -42,12 +42,12 @@
 		$iiImg 				= get_field('blocImgTxtImageThree');
 		$iiImgTwo 			= get_field('blocImgTxtImageFour');
 	// Background 
-		$bgImage 			= get_field('servicesImgBefore')['url'];		
+		$bgImage 			= get_field('servicesImgBefore')['sizes']['img-bg-one']	
 	// Services
 		$servicesTitle 		= get_field('servicesTitle');
 		$servicesRepeater 	= 'servicesList';
 	// Background 
-		$bgImageTwo 		= get_field('servicesImgAfter')['url'];	
+		$bgImageTwo 		= get_field('servicesImgAfter')['sizes']['img-bg-one']
 
 get_header();
 
