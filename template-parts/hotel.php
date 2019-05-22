@@ -28,10 +28,10 @@ get_header();
 					<?php $image = get_field('blocImgTxtImageOne');
 					$imageTwo = get_field('blocImgTxtImageTwo');
 					if( !empty($image) ): ?>
-						<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+						<img src="<?php echo $image['sizes']['img-type-one']; ?>" alt="<?php echo $image['alt']; ?>" />
 					<?php endif; ?>	
 					<?php if( !empty($imageTwo) ): ?>
-						<img class="c-float-image" src="<?php echo $imageTwo['url']; ?>" alt="<?php echo $imageTwo['alt']; ?>" />
+						<img class="c-float-image" src="<?php echo $imageTwo['sizes']['img-type-one']; ?>" alt="<?php echo $imageTwo['alt']; ?>" />
 					<?php endif; ?>	
 				</div>
 			</div>
@@ -82,7 +82,7 @@ if( $images ): ?>
 				<div class="c-block-txt-img_content_image">
 					<?php $image = get_field('blocTwoImgTxtImageOne');
 					if( !empty($image) ): ?>
-						<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+						<img src="<?php echo $image['sizes']['img-type-two']; ?>" alt="<?php echo $image['alt']; ?>" />
 					<?php endif; ?>	
 				</div>					
 				</div>
@@ -93,10 +93,10 @@ if( $images ): ?>
 					<?php $image = get_field('blocTxtImgImageOne');
 					$imageTwo = get_field('blocTxtImgImageTwo');
 					if( !empty($image) ): ?>
-						<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+						<img src="<?php echo $image['sizes']['img-type-six']; ?>" alt="<?php echo $image['alt']; ?>" />
 					<?php endif; ?>	
 					<?php if( !empty($imageTwo) ): ?>
-						<img class="c-float-image" src="<?php echo $imageTwo['url']; ?>" alt="<?php echo $imageTwo['alt']; ?>" />
+						<img class="c-float-image" src="<?php echo $imageTwo['sizes']['img-type-six']; ?>" alt="<?php echo $imageTwo['alt']; ?>" />
 					<?php endif; ?>	
 				</div>
 				<div class="c-block-txt-img_images_content">
@@ -126,7 +126,7 @@ if( $images ): ?>
 				<div class="c-block-img-txt_images">
 					<?php $image = get_field('blocTwoImgTxtImageOne');
 					if( !empty($image) ): ?>
-						<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+						<img src="<?php echo $image['sizes']['img-type-two']; ?>" alt="<?php echo $image['alt']; ?>" />
 					<?php endif; ?>	
 				</div>	
 			</div>				
@@ -141,7 +141,7 @@ if( $images ): ?>
 
 
 <section class="o-section c-block-background">
-	<div class="c-bg" style="background: url(<?php echo get_field('bgAfterActivities')['url']; ?>"></div>
+	<div class="c-bg" style="background: url(<?php echo get_field('bgAfterActivities')['sizes']['img-bg-one']; ?>"></div>
 </section>	
 
 

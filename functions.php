@@ -311,6 +311,7 @@ add_image_size( 'img-type-two', 514,666, array( 'center', 'center' ) ); // Hard 
 add_image_size( 'img-type-thr', 411,318, array( 'center', 'center' ) ); // Hard crop left top
 add_image_size( 'img-type-for', 368,472, array( 'center', 'center' ) ); // Hard crop left top
 add_image_size( 'img-type-fiv', 634,483, array( 'center', 'center' ) ); // Hard crop left top
+add_image_size( 'img-type-six', 465,343, array( 'center', 'center' ) ); // Hard crop left top
 
 add_image_size( 'img-bg-one', 1440,500, array( 'center', 'center' ) ); // Hard crop left top
 add_image_size( 'img-bg-two', 1440,568, array( 'center', 'center' ) ); // Hard crop left top
