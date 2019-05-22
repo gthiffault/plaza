@@ -66,10 +66,10 @@ get_header();
 				<div class="o-layout__item u-1/2@portrait-large-tablet">
 					<div class="c-block-img-txt_images">
 						<?php if( !empty($itOneImage) ): ?>
-							<img src="<?php echo $itOneImage['url']; ?>" alt="<?php echo $itOneImage['alt']; ?>" />
+							<img src="<?php echo $itOneImage['sizes']['img-type-one']; ?>" alt="<?php echo $itOneImage['alt']; ?>" />
 						<?php endif; ?>	
 						<?php if( !empty($itOneImageTwo) ): ?>
-							<img class="c-float-image" src="<?php echo $itOneImageTwo['url']; ?>" alt="<?php echo $itOneImageTwo['alt']; ?>" />
+							<img class="c-float-image" src="<?php echo $itOneImageTwo['sizes']['img-type-thr']; ?>" alt="<?php echo $itOneImageTwo['alt']; ?>" />
 						<?php endif; ?>	
 					</div>
 				</div>
@@ -89,11 +89,11 @@ get_header();
 		<div class="o-wrapper">
 			<div class="o-layout o-layout--flush o-layout--reverse">
 				<?php if( !empty($iiImg) ): ?>
-					<img class="c-float-image" src="<?php echo $iiImg['url']; ?>" alt="<?php echo $iiImg['alt']; ?>" />
+					<img class="c-float-image" src="<?php echo $iiImg['sizes']['img-type-for']; ?>" alt="<?php echo $iiImg['alt']; ?>" />
 				<?php endif; ?>				
 				<div class="o-layout__item u-1/2@landscape-medium-tablet u-14/20@portrait-large-tablet">
 					<?php if( !empty($iiImgTwo) ): ?>
-						<img src="<?php echo $iiImgTwo['url']; ?>" alt="<?php echo $iiImgTwo['alt']; ?>" />
+						<img src="<?php echo $iiImgTwo['sizes']['img-type-fiv']; ?>" alt="<?php echo $iiImgTwo['alt']; ?>" />
 					<?php endif; ?>					
 				</div>
 			</div>		
