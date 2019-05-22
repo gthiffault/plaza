@@ -54,7 +54,7 @@
 		$doolysAccordionTitle 		= 'doolysAccordionTitle';
 		$doolysAccordionContent 	= 'doolysAccordionContent';
 	// Background 
-		$bgImage 					= get_field('bgImageOne')['url'];		
+		$bgImage 					= get_field('bgImageOne')['sizes']['img-bg-one'];		
 	// Congresses and meetings
 		$cmTitle 					= get_field('congressesMeetingsTitle');
 		$cmContent 					= get_field('congressesMeetingsContent');
@@ -98,7 +98,7 @@ get_header();
 							<img src="<?php echo $rbImage['sizes']['img-type-one']; ?>" alt="<?php echo $rbImage['alt']; ?>" />
 						<?php endif; ?>	
 						<?php if( !empty($rbImageTwo) ): ?>
-							<img class="c-float-image" src="<?php echo $rbImageTwo['url']; ?>" alt="<?php echo $rbImageTwo['alt']; ?>" />
+							<img class="c-float-image" src="<?php echo $rbImageTwo['sizes']['img-type-thr']; ?>" alt="<?php echo $rbImageTwo['alt']; ?>" />
 						<?php endif; ?>	
 					</div>
 				</div>
@@ -124,7 +124,7 @@ get_header();
 						<div class="c-block-txt-img_images_wrap">
 						<?php $image = get_field('doolysImageOne');
 						if( !empty($image) ): ?>
-							<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+							<img src="<?php echo $image['sizes']['img-type-two']; ?>" alt="<?php echo $image['alt']; ?>" />
 						<?php endif; ?>	
 					</div>
 					</div>
@@ -165,7 +165,7 @@ get_header();
 						<div class="c-block-img-txt_images_wrap">
 						<?php $image = get_field('congressesMeetingsImageOne');
 						if( !empty($image) ): ?>
-							<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+							<img src="<?php echo $image['sizes']['img-type-two']; ?>" alt="<?php echo $image['alt']; ?>" />
 						<?php endif; ?>	
 					</div>
 					</div>
@@ -193,10 +193,10 @@ get_header();
 						<?php $weddingImage = get_field('weddingImageOne');
 						$weddingImageTwo = get_field('weddingImageTwo');
 						if( !empty($weddingImage) ): ?>
-							<img src="<?php echo $weddingImage['url']; ?>" alt="<?php echo $weddingImage['alt']; ?>" />
+							<img src="<?php echo $weddingImage['sizes']['img-type-one']; ?>" alt="<?php echo $weddingImage['alt']; ?>" />
 						<?php endif; ?>	
 						<?php if( !empty($weddingImageTwo) ): ?>
-							<img class="c-float-image" src="<?php echo $weddingImageTwo['url']; ?>" alt="<?php echo $weddingImageTwo['alt']; ?>" />
+							<img class="c-float-image" src="<?php echo $weddingImageTwo['sizes']['img-type-thr']; ?>" alt="<?php echo $weddingImageTwo['alt']; ?>" />
 						<?php endif; ?>	
 					</div>
 				</div>			
