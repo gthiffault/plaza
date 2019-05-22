@@ -306,6 +306,13 @@ add_image_size( 'device-img', 564, array( 'center', 'center' ) ); // Hard crop l
 add_image_size( 'banner-home', 1440,720, array( 'center', 'center' ) ); // Hard crop left top
 add_image_size( 'banner-page', 1440,560, array( 'center', 'center' ) ); // Hard crop left top
 
+add_image_size( 'img-type-one', 411,569, array( 'center', 'center' ) ); // Hard crop left top
+add_image_size( 'img-type-two', 514,666, array( 'center', 'center' ) ); // Hard crop left top
+add_image_size( 'img-type-thr', 411,318, array( 'center', 'center' ) ); // Hard crop left top
+add_image_size( 'img-type-for', 368,472, array( 'center', 'center' ) ); // Hard crop left top
+add_image_size( 'img-type-fiv', 634,483, array( 'center', 'center' ) ); // Hard crop left top
+add_image_size( 'img-type-men', 360,487, array( 'center', 'center' ) ); // Hard crop left top
+
 
 add_filter( 'gform_pre_render_1', 'populate_posts' );
 add_filter( 'gform_pre_validation_1', 'populate_posts' );

@@ -95,7 +95,7 @@ get_header();
 					<div class="c-block-img-txt_images">
 						<?php 
 						if( !empty($rbImage) ): ?>
-							<img src="<?php echo $rbImage['url']; ?>" alt="<?php echo $rbImage['alt']; ?>" />
+							<img src="<?php echo $rbImage['sizes']['img-type-one']; ?>" alt="<?php echo $rbImage['alt']; ?>" />
 						<?php endif; ?>	
 						<?php if( !empty($rbImageTwo) ): ?>
 							<img class="c-float-image" src="<?php echo $rbImageTwo['url']; ?>" alt="<?php echo $rbImageTwo['alt']; ?>" />
