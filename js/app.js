@@ -78,11 +78,11 @@ count++;
             },        	
       });
      $('.c-services.-hotel').slick({
-  infinite: true,
-  speed: 300,
-   dots: false,
-   arrows: true,
-   appendArrows:".c-arrows",
+  	infinite: true,
+  	speed: 300,
+   	dots: false,
+   	arrows: true,
+	appendArrows: ".c-arrows.-accommodation",
 responsive: [
     {
       breakpoint: 9999999999,
@@ -139,7 +139,7 @@ responsive: [
   speed: 300,
    dots: false,
    arrows: true,
-   appendArrows: ".c-arrows",
+   appendArrows: ".c-arrows.-services",
 responsive: [
     {
       breakpoint: 99999999999999999,
@@ -189,7 +189,7 @@ responsive: [
        $('.c-block-region_ul').slick({
   infinite: true,
    arrows: true,
-   appendArrows: ".c-arrows",  
+   appendArrows: ".c-arrows.-region",  
 responsive: [
     {
       breakpoint: 99999999999999999,
@@ -229,7 +229,6 @@ responsive: [
   infinite: true,
    arrows: true,
    adaptiveHeight: true,
-   appendArrows: ".c-arrows",  
       });
 
 

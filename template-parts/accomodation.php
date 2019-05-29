@@ -76,7 +76,7 @@ get_header();
 						<li class="o-layout__item c-services-<?php echo $value;?>"><div class="c-services_icons"></div><p><?php echo $label;?></p></li>
 				    <?php endwhile;
 				echo '</ul>';?>
-				<div class="c-arrows"></div>
+				<div class="c-arrows -accommodation"></div>
 			<?php endif; ?>
 		</div>
 	</section>

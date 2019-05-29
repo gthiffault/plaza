@@ -155,7 +155,7 @@ get_header();
 					<?php endwhile;
 				echo '</ul>';
 			endif;?>			
-			<div class="c-arrows"></div>
+			<div class="c-arrows -services"></div>
 			<div class="c-services_link">
 				<a href="<?php echo get_field('servicesLink');?>" class="c-btn c-btn--primary"><?php echo get_field('servicesLinkDescription');?></a>	
 			</div>
