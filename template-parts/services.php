@@ -115,37 +115,6 @@ get_header();
 		</div>
 	</section>
 
-<?php /* Dooly's */ ?>
-	<section class="o-section c-block-txt-img -type-2 -v0 -doolys">
-		<div class="o-wrapper">
-			<div class="o-layout o-layout--huge o-layout--reverse">
-				<div class="o-layout__item u-1/2@portrait-large-tablet">
-					<div class="c-block-txt-img_images">
-						<div class="c-block-txt-img_images_wrap">
-						<?php $image = get_field('doolysImageOne');
-						if( !empty($image) ): ?>
-							<img src="<?php echo $image['sizes']['img-type-two']; ?>" alt="<?php echo $image['alt']; ?>" />
-						<?php endif; ?>	
-					</div>
-					</div>
-				</div>			
-				<div class="o-layout__item u-1/2@portrait-large-tablet">
-					<div class="c-block-txt-img_content">
-						<h2><?php echo $doolysTitle; ?></h2>
-						<div class="c-block-img-txt_content_text">
-							<?php echo $doolysContent;?>
-						</div>
-						<?php echo do_shortcode('[accordion pagetype="-services" title="none" content="none" accordion="' . $doolysAccordion . '" accordiontitle="'.$doolysAccordionTitle.'" accordioncontent="'.$doolysAccordionContent.'" divtype="div"]');?>							
-					</div>					
-				</div>						
-			</div>	
-		</div>
-	</section>
-
-<?php /* Background image */ ?>
-	<section class="o-section c-block-background">
-		<div class="c-bg" style="background: url(<?php echo $bgImage;?>"></div>
-	</section>	
 
 <?php /* Congresses and meetings*/ ?>
 	<section class="o-section c-block-img-txt -type-2 -v1 -congresses-n-meetings">
@@ -203,6 +172,39 @@ get_header();
 			</div>		
 		</div>
 	</section>
+
+<?php /* Dooly's */ ?>
+	<section class="o-section c-block-txt-img -type-2 -v0 -doolys">
+		<div class="o-wrapper">
+			<div class="o-layout o-layout--huge o-layout--reverse">
+				<div class="o-layout__item u-1/2@portrait-large-tablet">
+					<div class="c-block-txt-img_images">
+						<div class="c-block-txt-img_images_wrap">
+						<?php $image = get_field('doolysImageOne');
+						if( !empty($image) ): ?>
+							<img src="<?php echo $image['sizes']['img-type-two']; ?>" alt="<?php echo $image['alt']; ?>" />
+						<?php endif; ?>	
+					</div>
+					</div>
+				</div>			
+				<div class="o-layout__item u-1/2@portrait-large-tablet">
+					<div class="c-block-txt-img_content">
+						<h2><?php echo $doolysTitle; ?></h2>
+						<div class="c-block-img-txt_content_text">
+							<?php echo $doolysContent;?>
+						</div>
+						<?php echo do_shortcode('[accordion pagetype="-services" title="none" content="none" accordion="' . $doolysAccordion . '" accordiontitle="'.$doolysAccordionTitle.'" accordioncontent="'.$doolysAccordionContent.'" divtype="div"]');?>							
+					</div>					
+				</div>						
+			</div>	
+		</div>
+	</section>
+
+<?php /* Background image */ ?>
+	<section class="o-section c-block-background">
+		<div class="c-bg" style="background: url(<?php echo $bgImage;?>"></div>
+	</section>	
+
 
 <?php /* Servives and equipment */ ?>
 	<?php echo do_shortcode('[accordion pagetype="-services-n-equipment" contentvisible="true" title="'.$seTitle.'"
