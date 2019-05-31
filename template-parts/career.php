@@ -27,7 +27,7 @@
 		$formTitle 			= get_field('formTitle');
 		$formContent 		= get_field('formContent');
 	// Background
-		$bgImageOne = get_field('bgForm')['sizes']['img-bg-two']
+		$bgImageOne = get_field('bgForm')['sizes']['img-bg-two'];
 
 
 get_header();
