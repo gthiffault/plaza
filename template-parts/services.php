@@ -21,7 +21,8 @@
 		$doolysImage 		= "";
 		$doolysAccordion 	= "";
 	// Background 
-		$bgImage 			= "";		
+		$bgImage 			= "";
+		$bgImageTwo 		= "";		
 	// Congresses and meetings
 		$cmTitle 			= "";
 		$cmContent 			= "";
@@ -54,7 +55,8 @@
 		$doolysAccordionTitle 		= 'doolysAccordionTitle';
 		$doolysAccordionContent 	= 'doolysAccordionContent';
 	// Background 
-		$bgImage 					= get_field('bgImageOne')['sizes']['img-bg-one'];		
+		$bgImage 					= get_field('bgImageOne')['sizes']['img-bg-one'];	
+		$bgImageTwo 				= get_field('servicesEquipmentsImgAfter')['sizes']['img-bg-one'];		
 	// Congresses and meetings
 		$cmTitle 					= get_field('congressesMeetingsTitle');
 		$cmContent 					= get_field('congressesMeetingsContent');
@@ -142,7 +144,10 @@ get_header();
 			</div>	
 		</div>
 	</section>
-
+<?php /* Background image */ ?>
+	<section class="o-section c-block-background">
+		<div class="c-bg" style="background: url(<?php echo $bgImage;?>"></div>
+	</section>	
 <?php /* Wedding */ ?>
 
 	<section class="o-section c-block-img-txt -type-0 -v1 -wedding">
@@ -200,10 +205,7 @@ get_header();
 		</div>
 	</section>
 
-<?php /* Background image */ ?>
-	<section class="o-section c-block-background">
-		<div class="c-bg" style="background: url(<?php echo $bgImage;?>"></div>
-	</section>	
+
 
 
 <?php /* Servives and equipment */ ?>
@@ -213,7 +215,7 @@ get_header();
 
 <?php /* Background image */ ?>
 	<section class="o-section c-block-background -services">
-		<div class="c-bg" style="background: url(<?php echo $bgImage;?>"></div>
+		<div class="c-bg" style="background: url(<?php echo $bgImageTwo;?>"></div>
 	</section>		
 
 <?php get_footer();
