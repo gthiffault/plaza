@@ -582,7 +582,7 @@ function myselector(){
     if( ! empty( $languages ) ) {
         foreach( $languages as $l ){
             if( ! $l['active'] ) {
-                $items .= '<li class="menu-item"><a href="' . $l['url'] . '">' . $l['native_name'] . '</a></li>';
+                $items .= '<li class="menu-item"><a href="' . $l['url'] . '">' . $l['language_code'] . '</a></li>';
             }
         }
     }
