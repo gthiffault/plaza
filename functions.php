@@ -327,7 +327,7 @@ function populate_posts( $form ) {
  
     foreach ( $form['fields'] as &$field ) {
          	$post_language_information = wpml_get_language_information(get_the_ID());
-        	if($post_language_information['language_code'] == ICL_LANGUAGE_CODE) {
+        	if('fr' == ICL_LANGUAGE_CODE) {
         if ( strpos( $field->cssClass, 'populate-posts' ) === false ) {
             continue;
         }
