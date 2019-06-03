@@ -32,7 +32,7 @@
     							<span class="hamburger-inner"></span>
   							</span>
 						</button>
-						<ul class="o-list-bare">
+						<ul class="o-list-bare c-language-switcher">
 <?php echo myselector(); ?>	
 </ul>					
 					</div>					
