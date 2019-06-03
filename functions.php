@@ -325,14 +325,14 @@ add_filter( 'gform_pre_submission_filter_1', 'populate_posts' );
 add_filter( 'gform_admin_pre_render_1', 'populate_posts' );
 function populate_posts( $form ) {
  
+global $sitepress;
+$lang='fr';
+$sitepress->switch_lang($lang);
     foreach ( $form['fields'] as &$field ) {
  
 
 
 
-global $sitepress;
-$lang='fr';
-$sitepress->switch_lang($lang);
 
  
         if ( strpos( $field->cssClass, 'populate-posts' ) === false ) {
