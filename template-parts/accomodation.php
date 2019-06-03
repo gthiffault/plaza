@@ -61,6 +61,11 @@ get_header();
 
 if ( defined( 'ICL_LANGUAGE_CODE' ) ) {
   echo ICL_LANGUAGE_CODE;
+
+        	$post_language_information = wpml_get_language_information($post_id);
+        	echo $post_language_information['language_code'];
+
+
 }
 ?>
 	<section class="o-section c-block-services -accommodation">
