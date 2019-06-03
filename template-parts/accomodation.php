@@ -57,14 +57,7 @@ get_header();
 		</div>
 	</section>
 
-<?php /* Services - Accommodation */ 
-
-        	$post_language_information = wpml_get_language_information(get_the_ID());
-        	if($post_language_information['language_code'] == ICL_LANGUAGE_CODE) {
-            	echo "@43";
-        	}
-
-?>
+<?php /* Services - Accommodation */ ?>
 	<section class="o-section c-block-services -accommodation">
 		<div class="o-wrapper">
 			<h2><?php echo $listTitle; ?></h2>
