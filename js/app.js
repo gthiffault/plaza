@@ -341,5 +341,5 @@ $('.c-activities-slider').slick();
 $("a").click(function() {
   $('html, body').animate({
     scrollTop: $(window.location.hash).offset().top // Target hash not div
-  }, 0);
+  }, 400);
 });
