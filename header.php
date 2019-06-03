@@ -33,14 +33,14 @@
   							</span>
 						</button>
 						<ul class="o-list-bare c-language-switcher">
-<?php echo myselector(); ?>	
-</ul>					
+							<?php echo myselector(); ?>	
+						</ul>					
 					</div>					
 					<div class="c-header_logo">
 						<a href="<?php echo get_site_url(); ?>"><img src="<?php echo get_template_directory_uri();?>/images/logos/hotel-plaza_logo.svg" alt=""></a>
 					</div>
 					<div class="c-header_right"></div>
-					<div class="c-header_book-online"><a href="<?php echo get_field('bookingLink','option')['url'];?>" target="_blank" class="c-btn c-btn--secondary"><?php echo __('Reserve now','plaza');?></a></div>
+					<div class="c-header_book-online"><a href="<?php echo get_field('bookingLink','option')['url'];?>" target="_blank" class="c-btn c-btn--secondary"><?php echo __('Book now','plaza');?></a></div>
 				</div>
 			</div>
 			<div class="c-header-menu">
