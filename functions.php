@@ -333,7 +333,7 @@ function populate_posts( $form ) {
  
         // you can add additional parameters here to alter the posts that are retrieved
         // more info: http://codex.wordpress.org/Template_Tags/get_posts
-        $posts = get_posts( 'numberposts=-1&post_status=publish&post_type=career' );
+        $posts = get_posts( 'numberposts=-1&post_status=publish&post_type=career&suppress_filters=false' );
  
         $choices = array();
  
