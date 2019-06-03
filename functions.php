@@ -325,15 +325,7 @@ add_filter( 'gform_pre_submission_filter_1', 'populate_posts' );
 add_filter( 'gform_admin_pre_render_1', 'populate_posts' );
 function populate_posts( $form ) {
  
-global $sitepress;
-$lang='fr';
-$sitepress->switch_lang($lang);
     foreach ( $form['fields'] as &$field ) {
- 
-
-
-
-
  
         if ( strpos( $field->cssClass, 'populate-posts' ) === false ) {
             continue;
@@ -341,19 +333,29 @@ $sitepress->switch_lang($lang);
  
         // you can add additional parameters here to alter the posts that are retrieved
         // more info: http://codex.wordpress.org/Template_Tags/get_posts
-        $posts = get_posts( 'numberposts=-1&post_status=publish&post_type=career&suppress_filters=false' );
+
+$args = array(
+    'posts_per_page'   => -1,
+    'orderby'          => 'menu_order',
+    'order'            => 'ASC',
+    'post_type'        => 'career',
+    'suppress_filters' => false
+);
+$posts = get_posts( $args );
+
  
         $choices = array();
  
         foreach ( $posts as $post ) {
-        	$post_language_information = wpml_get_language_information(get_the_ID());
-        	if($post_language_information['language_code'] == ICL_LANGUAGE_CODE) {
-            	$choices[] = array( 'text' => $post->post_title, 'value' => $post->post_title );
-        	}
+            $choices[] = array( 'text' => $post->post_title, 'value' => $post->post_title );
         }
  
         // update 'Select a Post' to whatever you'd like the instructive option to be
-        $field->placeholder = 'Select a Post';
+if(ICL_LANGUAGE_CODE=="en"){ //When Language is English
+     $field->placeholder = '--- Select a post ---';
+}else{ //If language is not English
+     $field->placeholder = '--- Veuillez choisir un poste ---';       
+}
         $field->choices = $choices;
  
     }
@@ -587,18 +589,18 @@ add_filter('upload_mimes', 'cc_mime_types');
 
 
 function myselector(){
-    $languages = icl_get_languages('skip_missing=0');
+    // $languages = icl_get_languages('skip_missing=0');
  
-    $items = "";
-    if( ! empty( $languages ) ) {
-        foreach( $languages as $l ){
-            if( ! $l['active'] ) {
-                $items .= '<li class="menu-item"><a href="' . $l['url'] . '">' . $l['language_code'] . '</a></li>';
-            }
-        }
-    }
+    // $items = "";
+    // if( ! empty( $languages ) ) {
+    //     foreach( $languages as $l ){
+    //         if( ! $l['active'] ) {
+    //             $items .= '<li class="menu-item"><a href="' . $l['url'] . '">' . $l['language_code'] . '</a></li>';
+    //         }
+    //     }
+    // }
  
-    return $items;
+    // return $items;
 }
 
 /*
