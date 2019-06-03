@@ -336,7 +336,7 @@ function populate_posts( $form ) {
         $posts = get_posts( 'numberposts=-1&post_status=publish&post_type=career&suppress_filters=false' );
  
         $choices = array();
- 
+ do_action( 'wpml_switch_language', 'en' );
         foreach ( $posts as $post ) {
         	$post_language_information = wpml_get_language_information(get_the_ID());
         	if($post_language_information['language_code'] == ICL_LANGUAGE_CODE) {
