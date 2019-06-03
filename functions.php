@@ -339,7 +339,7 @@ function populate_posts( $form ) {
  
         foreach ( $posts as $post ) {
         	$post_language_information = wpml_get_language_information($post->id);
-        	if($post_language_information['language_code'] == ICL_LANGUAGE_CODE) {
+        	if(ICL_LANGUAGE_CODE == "fr") {
             	$choices[] = array( 'text' => $post->post_title, 'value' => $post->post_title );
         	}
         }
