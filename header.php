@@ -32,6 +32,7 @@
     							<span class="hamburger-inner"></span>
   							</span>
 						</button>
+<?php echo myselector(); ?>						
 					</div>					
 					<div class="c-header_logo">
 						<a href="<?php echo get_site_url(); ?>"><img src="<?php echo get_template_directory_uri();?>/images/logos/hotel-plaza_logo.svg" alt=""></a>
