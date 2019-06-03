@@ -55,7 +55,11 @@ get_header();
 									$image_alt = get_post_meta($image_id, '_wp_attachment_image_alt', TRUE);?>
 			        				<li>
 			        					<figure>
+			        						<?php if (($image_id)) {?>
 			        						<img src="<?php echo get_the_post_thumbnail_url(get_the_ID(),'list-img');?>" alt="<?php echo $image_alt;?>">
+			        					<?php } else { ?>
+			        						<img src="<?php echo get_template_directory_uri();?>/images/placeholder/placerholder-career.jpg">
+			        					<?php }?>
 			        						<figcaption>
 			        							<h3><?php echo get_the_title();?></h3>
 			        							<div class="c-career_item_content">
@@ -84,7 +88,11 @@ get_header();
 				    					$image_alt = get_post_meta($image_id, '_wp_attachment_image_alt', TRUE);?>
 				        				<li>
 				        					<figure>
+				        						<?php if (($image_id)) {?>
 			        						<img src="<?php echo get_the_post_thumbnail_url(get_the_ID(),'list-img');?>" alt="<?php echo $image_alt;?>">
+			        					<?php } else { ?>
+			        						<img src="<?php echo get_template_directory_uri();?>/images/placeholder/placerholder-career.jpg">
+			        					<?php }?>
 				        						<figcaption>
 				        							<h3><?php echo get_the_title();?></h3>
 				        							<div class="c-career_item_content">
@@ -111,7 +119,11 @@ get_header();
 				    					$image_alt = get_post_meta($image_id, '_wp_attachment_image_alt', TRUE);?>
 				        				<li>
 				        					<figure>
+				        						<?php if (($image_id)) {?>
 			        						<img src="<?php echo get_the_post_thumbnail_url(get_the_ID(),'list-img');?>" alt="<?php echo $image_alt;?>">
+			        					<?php } else { ?>
+			        						<img src="<?php echo get_template_directory_uri();?>/images/placeholder/placerholder-career.jpg">
+			        					<?php }?>
 				        						<figcaption>
 				        							<h3><?php echo get_the_title();?></h3>
 				        							<div class="c-career_item_content">
