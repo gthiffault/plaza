@@ -2298,6 +2298,13 @@ html.-js-menu-active {
 .grid-sizer {
   width: 100%; }
 
+.c-language-switcher {
+  margin-bottom: 0; }
+  .c-language-switcher li a {
+    color: #FFF;
+    text-decoration: none;
+    text-transform: uppercase; }
+
 .c-header_banner {
   margin-bottom: 72px; }
   .c-header_banner .c-banner-home_text {
