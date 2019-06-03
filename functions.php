@@ -339,8 +339,8 @@ function populate_posts( $form ) {
  
         foreach ( $posts as $post ) {
         	$post_language_information = wpml_get_language_information($post_id);
-        	if($post_language_information['language_code'] == ICL_LANGUAGE_CODE) {
-            $choices[] = array( 'text' => $post->post_title, 'value' => $post->post_title );
+        	if($post_language_information['language_code'] === ICL_LANGUAGE_CODE) {
+            	$choices[] = array( 'text' => $post->post_title, 'value' => $post->post_title );
         	}
         }
  
@@ -579,16 +579,16 @@ add_filter('upload_mimes', 'cc_mime_types');
 
 
 function myselector(){
-    // $languages = icl_get_languages('skip_missing=0');
+    $languages = icl_get_languages('skip_missing=0');
  
-    // $items = "";
-    // if( ! empty( $languages ) ) {
-    //     foreach( $languages as $l ){
-    //         if( ! $l['active'] ) {
-    //             $items .= '<li class="menu-item"><a href="' . $l['url'] . '">' . $l['language_code'] . '</a></li>';
-    //         }
-    //     }
-    // }
+    $items = "";
+    if( ! empty( $languages ) ) {
+        foreach( $languages as $l ){
+            if( ! $l['active'] ) {
+                $items .= '<li class="menu-item"><a href="' . $l['url'] . '">' . $l['language_code'] . '</a></li>';
+            }
+        }
+    }
  
     return $items;
 }
