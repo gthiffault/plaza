@@ -338,8 +338,8 @@ $('.o-list-bare li').each(function() {
 });
 $('.c-activities-slider').slick();
 
-$("a[href=#c-career_form]").click(function() {
+$("a[href*=#]").click(function() {
   $('html, body').animate({
     scrollTop: $(window.location.hash).offset().top // Target hash not div
-  }, 400);
+  }, );
 });
