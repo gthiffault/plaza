@@ -118,7 +118,7 @@ if( $images ): ?>
 				<div class="c-block-img-txt_content">
 					<div class="c-block-img-txt_content_wrap">
 					<?php echo get_field('blocTwoImgTxtContent');?>
-					<?php if(get_field('blocTwoImgTxtLink').length) {?><a class="c-btn c-btn--primary" href="https://agencezel.dev/plaza/hebergement/asdf"><?php echo get_field('blocTwoImgTxtLinkDescription');?></a><?php } ?>
+					<?php if(get_field('blocTwoImgTxtLink').length) {?><a class="c-btn c-btn--primary" href="https://agencezel.dev/plaza/hebergement/#packages"><?php echo get_field('blocTwoImgTxtLinkDescription');?></a><?php } ?>
 				</div>
 				</div>
 			</div>
