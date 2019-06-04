@@ -74,7 +74,7 @@ get_header();
 						$label = $field['choices'][ $value ];?>
 
 						<li class="o-layout__item c-services-<?php echo $value;?>">
-<?php $link = get_subfield('servicesIncludedServiceLink');
+<?php $link = get__field('servicesIncludedServiceLink');
 
 if( $link ) {
 	$link_url = $link['url'];
