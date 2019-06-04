@@ -73,7 +73,24 @@ get_header();
 						$value = $field['value'];
 						$label = $field['choices'][ $value ];?>
 
-						<li class="o-layout__item c-services-<?php echo $value;?>"><div class="c-services_icons"></div><p><?php echo $label;?></p></li>
+						<li class="o-layout__item c-services-<?php echo $value;?>">
+<?php $link = get_field('servicesIncludedServiceLink');
+
+if( $link ) {
+	$link_url = $link['url'];
+	$link_title = $link['title'];
+	$link_target = $link['target'] ? $link['target'] : '_self';
+	?>
+	<a href="<?php echo $link_url;?>" target="<?php echo $link_target;?>">
+	<?php }?>
+							<div class="c-services_icons"></div><p><?php echo $label;?></p>
+
+<?php
+if( $link ) {
+?></a>
+<?php }?>
+
+						</li>
 				    <?php endwhile;
 				echo '</ul>';?>
 				<div class="c-arrows -accommodation"></div>
