@@ -157,7 +157,7 @@ get_header();
 				<?php echo do_shortcode('[gravityform id="1" title="false" description="false" ajax="true"]');?>
 			</div>
 		</div>
-		<div class="c-block-background">
+		<div class="c-block-background -career">
 			<div class="c-bg" style="background: url(<?php echo $bgImageOne; ?>"></div>
 		</div>		
 	</section>
