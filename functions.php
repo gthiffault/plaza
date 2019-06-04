@@ -203,13 +203,13 @@ function cptAccommodation() {
 add_action( 'init', 'cptAccommodation', 0 );
 
 // Register Custom Post Type
-function cptCareer() {
+function cptCareerList() {
 
 	$labels = array(
 		'name'                  => _x( 'Postes disponibles', 'Post Type General Name', 'plaza' ),
 		'singular_name'         => _x( 'Poste disponible', 'Post Type Singular Name', 'plaza' ),
-		'menu_name'             => __( 'Carrière', 'plaza' ),
-		'name_admin_bar'        => __( 'Carrière', 'plaza' ),
+		'menu_name'             => __( 'Postes disponibles', 'plaza' ),
+		'name_admin_bar'        => __( 'Postes disponibles', 'plaza' ),
 		'archives'              => __( 'Archives des postes disponibles', 'plaza' ),
 		'attributes'            => __( 'Attributs d\'objet', 'plaza' ),
 		'parent_item_colon'     => __( 'Article parent:', 'plaza' ),
@@ -252,10 +252,10 @@ function cptCareer() {
 		'publicly_queryable'    => false,
 		'capability_type'       => 'page',
 	);
-	register_post_type( 'available-job', $args );
+	register_post_type( 'careerList', $args );
 
 }
-add_action( 'init', 'cptCareer', 0 );
+add_action( 'init', 'cptCareerList', 0 );
 
 
 if( function_exists('acf_add_options_page') ) {
@@ -338,7 +338,7 @@ $args = array(
     'posts_per_page'   => -1,
     'orderby'          => 'menu_order',
     'order'            => 'ASC',
-    'post_type'        => 'available-job',
+    'post_type'        => 'careerList',
     'suppress_filters' => false
 );
 $posts = get_posts( $args );
