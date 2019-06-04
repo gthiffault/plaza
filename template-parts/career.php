@@ -22,7 +22,7 @@
 		$blocTxtTitle 		= get_field('blocTxtTitle');
 		$blocTxtContent 	= get_field('blocTxtContent');
 	// List
-		$listPostType 		= 'career';
+		$listPostType 		= 'available-job';
 	// Form
 		$formTitle 			= get_field('formTitle');
 		$formContent 		= get_field('formContent');
