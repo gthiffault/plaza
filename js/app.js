@@ -337,9 +337,3 @@ $('.o-list-bare li').each(function() {
 	$(this).find('.c-accommodation_slider').slick();
 });
 $('.c-activities-slider').slick();
-
-$("a[href*=#]").click(function() {
-  $('html, body').animate({
-    scrollTop: $(window.location.hash).offset().top // Target hash not div
-  }, );
-});
