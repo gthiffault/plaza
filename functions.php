@@ -239,7 +239,7 @@ function cptCareer() {
 		'description'           => __( 'Poste disponible', 'plaza' ),
 		'labels'                => $labels,
 		'supports'              => array( 'title', 'thumbnail' ),
-		'hierarchical'          => true,
+		'hierarchical'          => false,
 		'public'                => true,
 		'show_ui'               => true,
 		'show_in_menu'          => true,
@@ -247,12 +247,12 @@ function cptCareer() {
 		'show_in_admin_bar'     => true,
 		'show_in_nav_menus'     => true,
 		'can_export'            => true,
-		'has_archive'           => true,
+		'has_archive'           => false,
 		'exclude_from_search'   => false,
 		'publicly_queryable'    => false,
 		'capability_type'       => 'page',
 	);
-	register_post_type( 'career', $args );
+	register_post_type( 'available-job', $args );
 
 }
 add_action( 'init', 'cptCareer', 0 );
