@@ -202,7 +202,60 @@ function cptAccommodation() {
 }
 add_action( 'init', 'cptAccommodation', 0 );
 
+// Register Custom Post Type
+function cptCareer() {
 
+	$labels = array(
+		'name'                  => _x( 'Postes disponibles', 'Post Type General Name', 'plaza' ),
+		'singular_name'         => _x( 'Poste disponible', 'Post Type Singular Name', 'plaza' ),
+		'menu_name'             => __( 'Carrière', 'plaza' ),
+		'name_admin_bar'        => __( 'Carrière', 'plaza' ),
+		'archives'              => __( 'Archives des postes disponibles', 'plaza' ),
+		'attributes'            => __( 'Attributs d\'objet', 'plaza' ),
+		'parent_item_colon'     => __( 'Article parent:', 'plaza' ),
+		'all_items'             => __( 'Tous les postes disponibles', 'plaza' ),
+		'add_new_item'          => __( 'Ajouter un poste', 'plaza' ),
+		'add_new'               => __( 'Ajouter un poste', 'plaza' ),
+		'new_item'              => __( 'Ajouter un poste', 'plaza' ),
+		'edit_item'             => __( 'Modifier le poste', 'plaza' ),
+		'update_item'           => __( 'Mettre à jour le poste', 'plaza' ),
+		'view_item'             => __( 'Voir le poste', 'plaza' ),
+		'view_items'            => __( 'Voir le poste', 'plaza' ),
+		'search_items'          => __( 'Chercher un poste', 'plaza' ),
+		'not_found'             => __( 'Non-trouvé', 'plaza' ),
+		'not_found_in_trash'    => __( 'Non-trouvé dans la corbeille', 'plaza' ),
+		'featured_image'        => __( 'Image vedette', 'plaza' ),
+		'set_featured_image'    => __( 'Définir l\'image vedette', 'plaza' ),
+		'remove_featured_image' => __( 'Retirer l\'image vedette', 'plaza' ),
+		'use_featured_image'    => __( 'Utiliser comme image vedette', 'plaza' ),
+		'insert_into_item'      => __( 'Insert into item', 'plaza' ),
+		'uploaded_to_this_item' => __( 'Uploaded to this item', 'plaza' ),
+		'items_list'            => __( 'Items list', 'plaza' ),
+		'items_list_navigation' => __( 'Items list navigation', 'plaza' ),
+		'filter_items_list'     => __( 'Filter items list', 'plaza' ),
+	);
+	$args = array(
+		'label'                 => __( 'Poste disponible', 'plaza' ),
+		'description'           => __( 'Poste disponible', 'plaza' ),
+		'labels'                => $labels,
+		'supports'              => array( 'title', 'thumbnail' ),
+		'hierarchical'          => true,
+		'public'                => true,
+		'show_ui'               => true,
+		'show_in_menu'          => true,
+		'menu_position'         => 5,
+		'show_in_admin_bar'     => true,
+		'show_in_nav_menus'     => true,
+		'can_export'            => true,
+		'has_archive'           => true,
+		'exclude_from_search'   => false,
+		'publicly_queryable'    => false,
+		'capability_type'       => 'page',
+	);
+	register_post_type( 'career', $args );
+
+}
+add_action( 'init', 'cptCareer', 0 );
 
 
 if( function_exists('acf_add_options_page') ) {
@@ -285,7 +338,7 @@ $args = array(
     'posts_per_page'   => -1,
     'orderby'          => 'menu_order',
     'order'            => 'ASC',
-    'post_type'        => 'careerList',
+    'post_type'        => 'career',
     'suppress_filters' => false
 );
 $posts = get_posts( $args );
