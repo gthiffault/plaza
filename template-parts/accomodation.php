@@ -141,7 +141,7 @@ get_header();
 
 <?php /* Tourist attractions - Accommodaton*/ ?>
 	<?php echo do_shortcode('[accordion pagetype="-accommodation" id="packages" contentvisible="true" title="'.$charmTitle.'" content="'.$chamContent.'"
-	accordion="'.$charmAccordion.'" accordiontitle="'.$charmAccordionTitle.'" accordioncontent='.$charmAccordionContent.'" divtype="section" wrapper="true"]');?>
+	accordion="'.$charmAccordion.'" accordiontitle="'.$charmAccordionTitle.'"  accordioncontent="charmsAccordionContent" divtype="section" wrapper="true"]');?>
 
 <?php /* Region - Accommodations */ ?>
 	<section class="o-section c-block-region">
