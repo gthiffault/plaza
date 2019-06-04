@@ -424,7 +424,7 @@ if( $images ): ?>
 						<div class="c-accomodation_item_description">
 						<?php echo get_field('accomodationContent');?>
 						</div>
-						<a href="<?php echo get_field('bookingLink','option')['url'];?>" target="_blank" class="c-btn c-btn--primary"><?php echo __('Reserve now','plaza');?></a>
+						<a href="<?php echo get_field('bookingLink','option')['url'];?>" target="_blank" class="c-btn c-btn--primary"><?php echo __('Book now','plaza');?></a>
 					</div>
 					<div class="c-icon"></div>
 
