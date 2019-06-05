@@ -2291,7 +2291,7 @@ html.-js-menu-active {
       width: 33.33%; } }
   @media (min-width: 1280px) {
     .c-gallery .grid-item.std {
-      width: 20%; }
+      width: 25%; }
     .c-gallery .grid-item.ext {
       width: 40%; } }
 
