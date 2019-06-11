@@ -12,7 +12,7 @@
 ?>
 
 	</main><!-- #content -->
-
+<div id="top"><div class="c-button-top">Top</div></div>
 	<footer class="c-footer">
 		<section class="o-section c-footer_line">
 			<div class="o-wrapper">

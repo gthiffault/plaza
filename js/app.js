@@ -324,8 +324,27 @@ $('.c-activities-slider').slick();
 
     var header = new Headroom(document.querySelector("#c-header_navigation"), {
         tolerance: 5,
-        offset : $('.c-banner-page'),
+        offset : 80,
     });
-    header.init();
+    
 
 
+    $(window).on('scroll', function() {
+    	header.init();
+    })
+
+
+$(function() { $("#top").on('click', function() { $("HTML, BODY").animate({ scrollTop: 0 }, 300); }); });
+
+
+
+
+
+$(window).scroll(function (event) {
+    var scroll = $(window).scrollTop();
+   	if(scroll > 120) {
+   		$('#top').addClass('not-top');
+   	} else {
+   		$('#top').removeClass('not-top');
+   	}
+});
