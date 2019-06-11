@@ -3808,7 +3808,8 @@ input[type="file" i]::-webkit-file-upload-button {
   background-color: #1F1F1F;
   border: 1px solid #FFF; }
   #top.not-top {
-    right: 0; }
+    right: 0;
+    bottom: 24px; }
   #top:hover {
     cursor: pointer; }
   #top .c-button-top {
