@@ -87,43 +87,43 @@ responsive: [
     {
       breakpoint: 9999999999,
       settings: {
-        slidesToShow: 6,
-        slidesToScroll: 6,
+        slidesToShow: 7,
+        slidesToScroll: 7,
         infinite: true,
       }
     },
     {
       breakpoint: 1280,
       settings: {
-        slidesToShow: 5,
+        slidesToShow: 6,
         slidesToScroll: 1
       }
     },
     {
       breakpoint: 1024,
       settings: {
-        slidesToShow: 4,
+        slidesToShow: 6,
         slidesToScroll: 1
       }
     },
     {
       breakpoint: 840,
       settings: {
-        slidesToShow: 3,
+        slidesToShow: 4,
         slidesToScroll: 1
       }
     },
     {
       breakpoint: 600,
       settings: {
-        slidesToShow: 2,
+        slidesToShow: 3,
         slidesToScroll: 1
       }
     },
     {
       breakpoint: 480,
       settings: {
-        slidesToShow: 1,
+        slidesToShow: 2,
         slidesToScroll: 1
       }
     }    
