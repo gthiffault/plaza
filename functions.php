@@ -589,16 +589,16 @@ add_filter('upload_mimes', 'cc_mime_types');
 
 
 function myselector(){
-    // $languages = icl_get_languages('skip_missing=0');
+    $languages = icl_get_languages('skip_missing=0');
  
-    // $items = "";
-    // if( ! empty( $languages ) ) {
-    //     foreach( $languages as $l ){
-    //         if( ! $l['active'] ) {
-    //             $items .= '<li class="menu-item"><a href="' . $l['url'] . '">' . $l['language_code'] . '</a></li>';
-    //         }
-    //     }
-    // }
+    $items = "";
+    if( ! empty( $languages ) ) {
+        foreach( $languages as $l ){
+            if( ! $l['active'] ) {
+                $items .= '<li class="menu-item"><a href="' . $l['url'] . '">' . $l['language_code'] . '</a></li>';
+            }
+        }
+    }
  
     return $items;
 }
