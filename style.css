@@ -1839,7 +1839,8 @@ table {
 
 .c-header_navigation {
   width: 100%;
-  position: absolute;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.4);
   z-index: 2; }
   @media (min-width: 320px) {
     .c-header_navigation {
@@ -1970,9 +1971,8 @@ table {
     opacity: 0.4; }
 
 .c-header-menu {
-  position: relative;
   height: 100vh;
-  position: absolute;
+  position: fixed;
   display: block;
   z-index: -1;
   -webkit-transition: z-index 0s 0.5s linear;
@@ -2172,7 +2172,6 @@ table {
       right: calc(-100vw); }
 
 html.-js-menu-active {
-  position: fixed;
   width: 100%; }
 
 .-js-menu-active .c-header-menu {

@@ -22,7 +22,7 @@
 	</head>
 	<body <?php body_class(); ?>>
 		<header class="c-header">
-			<div class="c-header_navigation">
+			<div id="c-header_navigation" class="c-header_navigation">
 				<div class="o-wrapper">
 					<div class="c-header_menu">
 						<div class="c-header_icon"></div>
