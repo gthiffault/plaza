@@ -200,9 +200,9 @@ responsive: [
        $('.c-block-region_ul').slick({
   	infinite: true,
    	arrows: true,
-   	appendArrows: ".c-arrows.-region",
     autoplay:true,
-    autoplaySpeed:4000,  
+    autoplaySpeed:4000,     	
+   	appendArrows: ".c-arrows.-region",
 responsive: [
     {
       breakpoint: 99999999999999999,
