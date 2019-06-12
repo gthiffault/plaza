@@ -199,9 +199,7 @@ responsive: [
 
        $('.c-block-region_ul').slick({
   	infinite: true,
-   	arrows: true,
-    autoplay:true,
-    autoplaySpeed:4000,     	
+   	arrows: true,    	
    	appendArrows: ".c-arrows.-region",
 responsive: [
     {
@@ -324,7 +322,11 @@ if($('.c-google-maps').length) {
 $('.o-list-bare li').each(function() {
 	$(this).find('.c-accommodation_slider').slick();
 });
-$('.c-activities-slider').slick();
+$('.c-activities-slider').slick({
+	autoplay:true,
+    autoplaySpeed:4000, 
+    dots: false
+});
 
 
 
