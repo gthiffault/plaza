@@ -2931,34 +2931,29 @@ html.-js-menu-active {
         background: url("images/sprite/hotel-plaza_sprite.svg");
         margin: 0 auto;
         margin-bottom: 40px;
-        vertical-align: middle; }
+        vertical-align: middle;
+        height: 80px; }
       .c-block-services.-accommodation ul li.c-services-0 .c-services_icons {
         background-position: -526px -127px;
-        height: 76px;
         width: 66px; }
       .c-block-services.-accommodation ul li.c-services-1 .c-services_icons {
         background-position: -608px -127px;
-        height: 76px;
         width: 78px; }
       .c-block-services.-accommodation ul li.c-services-2 .c-services_icons {
         background-position: -702px -127px;
-        height: 76px;
         width: 71px; }
       .c-block-services.-accommodation ul li.c-services-3 .c-services_icons {
         background-position: -859px 0px;
-        height: 78px;
         width: 93px; }
       .c-block-services.-accommodation ul li.c-services-4 .c-services_icons {
         background-position: -789px -127px;
-        height: 76px;
-        width: 78px; }
+        width: 78px;
+        margin-bottom: 67px; }
       .c-block-services.-accommodation ul li.c-services-5 .c-services_icons {
         background-position: -883px -127px;
-        height: 76px;
         width: 45px; }
       .c-block-services.-accommodation ul li.c-services-6 .c-services_icons {
         background-position: -968px -1px;
-        height: 84px;
         width: 101px; }
 
 .c-block-accordion {

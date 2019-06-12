@@ -75,6 +75,8 @@ var count = 1;
   infinite: true,
   speed: 300,
    dots: true,
+   autoPlay:true,
+   autoplaySpeed: 4000,
    appendDots: '.c-dots',
     customPaging : function(slider, count) {
 count++;
