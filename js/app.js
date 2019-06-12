@@ -78,8 +78,9 @@ var count = 1;
    autoPlay:true,
    autoplaySpeed: 4000,
    appendDots: '.c-dots',
+   pauseOnHover:false,
     customPaging : function(slider, count) {
-count++;
+	count++;
     var thumb = $(slider.$slides[count]).data();
     return '<a class="dot">'+count+'</a>';
 
