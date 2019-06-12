@@ -72,11 +72,11 @@ $(".c-form_date input").prop("readonly", true);
 var count = 1;
 
       $('.c-home-gallery').slick({
-  infinite: true,
-  speed: 300,
-   dots: true,
-   autoPlay:true,
-   autoplaySpeed: 4000,
+      	infinite: true,
+    dots:true,
+    arrows:false,
+    autoplay:true,
+    autoplaySpeed:4000,
    appendDots: '.c-dots',
    pauseOnHover:false,
     customPaging : function(slider, count) {
@@ -91,6 +91,8 @@ var count = 1;
   	speed: 300,
    	dots: false,
    	arrows: true,
+    autoplay:true,
+    autoplaySpeed:4000,   	
 	appendArrows: ".c-arrows.-accommodation",
 responsive: [
     {
